@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuadraStack</title>
+    <style>
+        #quadra-stack-title {
+            
+            align-items: center;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #000;
+            color: #fff;
+            font-family: Arial, sans-serif;
+        }
+        #game-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        canvas {
+            border: 2px solid #fff;
+            background-color: #111;
+        }
+        #next-tetromino {
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        #start-button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #fff;
+            color: #000;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        #score {
+            margin-top: 10px;
+            font-size: 18px;
+        }
+        
+    </style>
+</head>
+<h1 id="quadra-stack-title">QuadraStack</h1>
+<body>
+    
+    <div id="game-container">
+        <canvas id="gameCanvas" width="640" height="640"></canvas>
+        <div id="next-tetromino">
+            <canvas id="nextCanvas" width="128" height="128"></canvas>
+            <div id="score">Score: 0</div>
+        </div>
+        <button id="start-button">Start Game</button>
+    </div>
+    <script src="tetris.js"></script>
+</body>
+</html>
